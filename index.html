@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel Men</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="multilevel-menu">
+        <ol id="tree" class=" mt-0">
+            <li>
+                <!-- <input type="checkbox" id="item_12" /> -->
+                <label id="first-label" for="item_12" class="my-0">Fruits</label>
+                <ol>
+                    <li>
+    
+                        <!-- <input type="checkbox" id="item_14" checked /> -->
+                        <label for="item_14">Citrus Fruits</label>
+                        <ol>
+                            <li>
+                                <label>
+                                    <a class="filter-link" data-url="http://www.project.two/admin/items/filter?id=15">
+                                        Fresh Fruits</a>
+                                </label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+    
+                        <!-- <input type="checkbox" id="item_16" checked /> -->
+                        <label for="item_16">Berries Fruits</label>
+                        <ol>
+                            <li>
+                                <label>
+                                    <a class="filter-link" data-url="http://www.project.two/admin/items/filter?id=17">
+                                        Frozen Fruits</a>
+                                </label>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <!-- <input type="checkbox" id="item_18"  /> -->
+                <label for="item_18" class="my-0">Headphones</label>
+                <ol>
+                    <li>
+    
+                        <!-- <input type="checkbox" id="item_19" checked /> -->
+                        <label for="item_19">Over-Ear</label>
+                        <ol>
+                            <li>
+                                <label>
+                                    <a class="filter-link" data-url="http://www.project.two/admin/items/filter?id=20">
+                                        Closed-back </a>
+                                </label>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <!-- <input type="checkbox" id="item_21" checked /> -->
+                <label for="item_21" class="my-0">Computers</label>
+                <ol>
+                    <li>
+    
+                        <!-- <input type="checkbox" id="item_22" checked /> -->
+                        <label for="item_22">Desktop</label>
+                        <ol>
+                            <li>
+                                <label>
+                                    <a class="filter-link" data-url="http://www.project.two/admin/items/filter?id=23">
+                                        Workstations</a>
+                                </label>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <!-- <input type="checkbox" id="item_46" checked /> -->
+                <label for="item_46" class="my-0">yosra yosra</label>
+                <ol>
+                    <li>
+    
+                        <!-- <input type="checkbox" id="item_47" checked /> -->
+                        <label for="item_47">Ahmed</label>
+                        <ol>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+    $(document).ready(function() {
+        
+        $('label').on('click', function () {
+            $(this).toggleClass('selected');
+            //$(this).next('ol').toggle();
+            const parents = $(this).parent().siblings()
+            console.log(parents)
+            parents.forEach(element => {
+                element.closest('label').removeClass('selected');
+            });
+        })
+    })
+    </script>
+</body>
+</html>

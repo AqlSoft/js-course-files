@@ -1,0 +1,29 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+.multilevel-menu {
+	width: 300px;
+}
+.multilevel-menu > ol > li {
+	font: 500 1.1rem/1.2 Cairo;
+	padding: 0.4rem 1rem;
+	margin-bottom: 2px;
+	background-color: #ddd;
+}
+.multilevel-menu > ol > li {
+	/* display: none; */
+}
+.multilevel-menu > ol > li > label {
+    display: block;
+}
+.multilevel-menu > ol > li > label ~ ol {
+    overflow: hidden;
+	height: 0;
+}
+.multilevel-menu > ol > li > label.selected ~ol {
+    height: auto;
+}
+
